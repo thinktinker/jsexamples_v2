@@ -22,6 +22,7 @@
         
         <!-- Select element for saluation -->
         <select name="inputSelect" class="form-select" id="inputSelect"></select>
+
         <label for="inputSelect">Salutation:</label>
 
       </div>
@@ -41,15 +42,46 @@
   </main>
   
   <!-- include the javascript statements from index.js -->
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
-  <script>
+<script>
 
-    // implement your statement(s) here
-    // e.g. statement 1
-    // e.g. statement 2
+    // retrieve the salutation values from arrow function ftnSaluation, store it as a const "arr"
+    const arr = ftnSalutation(); 
 
-  </script>
+  const selectList = document.getElementById("inputSelect");
+
+  // fills up option value 
+  selectList.options[0] = new Option("Please select", "");
+
+  // iterate through arr to dynamically inject the options
+  for (let index = 0; index < arr.length; index++) {
+      selectList.options[index + 1] = new Option(arr[index], arr[index]);
+  }
+
+  function ftnProcessName(){
+    const selectedChoice = document.getElementById("inputSelect").value;
+    const uName = document.getElementById("inputName").value;
+
+    alert(`Salutation: ${selectedChoice}, Name: ${uName}`)
+  }
+
+  // 2. process the user's inputs
+  function ftnProcessName(){
+    const selectedChoice = document.getElementById("inputSelect").value;
+    const uName = document.getElementById("inputName").value;
+
+    const validated = validateInputs();
+
+    if(!validated)
+      return alert("All inputs need to be completed.");
+
+
+    //call ftn greeting to display our feedback
+    return alert(ftnGreeting(selectedChoice, uName));
+  }
+</script>
+
   
   <!-- Bootstrap JavaScript Library -->
   <script

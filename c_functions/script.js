@@ -6,9 +6,11 @@
   of the salutations to pupulate inputSelect
   found in index.html
 */
+// [0] [1] [2] [3]
 function ftnSalutation(){
-  //  implement your statement(s) here
+    return new Array("Mr.", "Mrs.", "Ms.");
 }
+
 
 /* 
   ftnSalutation written as an ARROW function
@@ -18,6 +20,8 @@ function ftnSalutation(){
 */
 const ftnGreeting = (salutation, user) => {
     //  implement your statement(s) here
+    const msg =`Hi, ${salutation} ${user}!`;
+    return msg;
 }
 
 /*
@@ -29,3 +33,46 @@ Hint:
 - validateInputs returns false if either choice or name is incorrectly filled
 - validateInputs returns true if both choice and name are correctly filled
 */
+
+
+
+//function validateInputs(choice = "", name = ""){
+
+//  if(choice === "")
+//    return;
+
+//  if(name === "")
+//    return;
+
+  // otherwise, return true
+//  return true;
+//}
+//Option 2:
+//function validateInputs(choice = "", name = ""){
+
+//  if(choice === "" || name === "")
+    return;
+
+  // otherwise, return true
+//  return true;
+//}
+//Option 3:
+//function validateInputs(choice = "", name = ""){
+
+//  return choice !== "" && name !== "";
+
+//}
+//
+
+
+function validateInputs(){
+    // verify if selectedChoice was chosen
+    // check if uName is chosen
+    if (selectedChoice !==0 && uName !==null){  
+        validated = true
+    }else{
+        alert("we did not receive your name");
+    }
+
+
+}
