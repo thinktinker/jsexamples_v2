@@ -1,0 +1,17 @@
+{
+  "name": "find-your-hat",
+  "version": "1.0.1",
+  "description": "A terminal maze-solving game.",
+  "main": "find-your-hat.js",
+  "project_name": "Codecademy",
+  "author": "Kuo Sheng Clement ANG",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^11.7.5"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
